@@ -348,80 +348,80 @@ public class CommandUtils {
 	private static int getC(String arg) {
 		if (!hasC(arg))
 			return Integer.MAX_VALUE;
-		return Integer.parseInt(arg.toLowerCase().split("=")[1]);
+		return Integer.parseInt(arg.toLowerCase().replace("!", "").split("=")[1]);
 	}
 
 	private static int getR(String arg) {
 		if (!hasR(arg))
 			return Integer.MAX_VALUE;
-		return Integer.parseInt(arg.toLowerCase().split("=")[1]);
+		return Integer.parseInt(arg.toLowerCase().replace("!", "").split("=")[1]);
 	}
 
 	private static int getRM(String arg) {
 		if (!hasRM(arg))
 			return 1;
-		return Integer.parseInt(arg.toLowerCase().split("=")[1]);
+		return Integer.parseInt(arg.toLowerCase().replace("!", "").split("=")[1]);
 	}
 
 	private static int getRX(String arg) {
 		if (!hasRX(arg))
 			return -Integer.MAX_VALUE;
-		return Integer.parseInt(arg.toLowerCase().split("=")[1]);
+		return Integer.parseInt(arg.toLowerCase().replace("!", "").split("=")[1]);
 	}
 
 	private static int getRXM(String arg) {
 		if (!hasRXM(arg))
 			return -8;
-		return Integer.parseInt(arg.toLowerCase().split("=")[1]);
+		return Integer.parseInt(arg.toLowerCase().replace("!", "").split("=")[1]);
 	}
 
 	private static int getRY(String arg) {
 		if (!hasRY(arg))
 			return -Integer.MAX_VALUE;
-		return Integer.parseInt(arg.toLowerCase().split("=")[1]);
+		return Integer.parseInt(arg.toLowerCase().replace("!", "").split("=")[1]);
 	}
 
 	private static int getRYM(String arg) {
 		if (!hasRYM(arg))
 			return -8;
-		return Integer.parseInt(arg.toLowerCase().split("=")[1]);
+		return Integer.parseInt(arg.toLowerCase().replace("!", "").split("=")[1]);
 	}
 
 	private static int getH(String arg) {
 		if (!hasH(arg))
 			return -1;
-		return Integer.parseInt(arg.toLowerCase().split("=")[1]);
+		return Integer.parseInt(arg.toLowerCase().replace("!", "").split("=")[1]);
 	}
 
 	private static int getHM(String arg) {
 		if (!hasHM(arg))
 			return Integer.MAX_VALUE;
-		return Integer.parseInt(arg.toLowerCase().split("=")[1]);
+		return Integer.parseInt(arg.toLowerCase().replace("!", "").split("=")[1]);
 	}
 
 	private static int getL(String arg) {
 		if (!hasL(arg))
 			return -1;
-		return Integer.parseInt(arg.toLowerCase().split("=")[1]);
+		return Integer.parseInt(arg.toLowerCase().replace("!", "").split("=")[1]);
 	}
 
 	private static int getLM(String arg) {
 		if (!hasLM(arg))
 			return Integer.MAX_VALUE;
-		return Integer.parseInt(arg.toLowerCase().split("=")[1]);
+		return Integer.parseInt(arg.toLowerCase().replace("!", "").split("=")[1]);
 	}
 
 	private static String getName(String arg) {
 		String reparg = arg.replace(" ", "_");
 		if (!hasName(reparg))
 			return null;
-		return reparg.split("=")[1];
+		return reparg.replace("!", "").split("=")[1];
 	}
 
 	private static World getW(String arg) {
 		if (!hasW(arg))
 			return null;
-		return Bukkit.getWorld(arg.split("=")[1]);
+		return Bukkit.getWorld(arg.replace("!", "").split("=")[1]);
 	}
 
 	private static String getScoreMinName(String arg) {
@@ -440,19 +440,19 @@ public class CommandUtils {
 	private static String getTeam(String arg) {
 		if (!hasTeam(arg))
 			return null;
-		return arg.toLowerCase().split("=")[1];
+		return arg.toLowerCase().replace("!", "").split("=")[1];
 	}
 
 	private static int getScoreMin(String arg) {
 		if (!hasScoreMin(arg))
 			return -8;
-		return Integer.parseInt(arg.split("=")[1]);
+		return Integer.parseInt(arg.replace("!", "").split("=")[1]);
 	}
 
 	private static int getScore(String arg) {
 		if (!hasScore(arg))
 			return Integer.MAX_VALUE;
-		return Integer.parseInt(arg.split("=")[1]);
+		return Integer.parseInt(arg.replace("!", "").split("=")[1]);
 	}
 
 	private static GameMode getM(String arg) {
