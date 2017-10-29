@@ -274,6 +274,8 @@ public class CommandUtils {
 	}
 
 	private static String[] getTags(String arg) {
+		if(!args.contains("["))
+			return new String[0];
 		String tags = arg.split("\\[")[1].split("\\]")[0];
 		return tags.split(",");
 	}
